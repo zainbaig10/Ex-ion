@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+    <title>Ex-ion </title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon/faviconimg.png">
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Rubik:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <!--build:css css/royarch-assets.min.css-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/line-awesome.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/owl.theme.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/flexslider.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/settings.css">
+    <link rel="stylesheet" type="text/css" href="css/layers.css">
+    <link rel="stylesheet" type="text/css" href="css/navigation.css">
+    <!--endbuild-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .page-banner-section {
+            background-color: #000000;
+        }
+
+        .services-box .row {
+            --bs-gutter-y: 1.5rem;
+            /* This adds vertical gap between rows */
+        }
+
+        .software-service-card {
+            height: 100%;
+            padding: 30px;
+            border-radius: 8px;
+            background: #1e1e1e;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: 1px solid #333;
+            margin-top: 30px;
+        }
+
+        .software-service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            background: #252525;
+        }
+
+        .software-service-card i {
+            font-size: 40px;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .software-service-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .software-service-card p {
+            color: #b0b0b0;
+            font-size: 15px;
+        }
+
+        .title-section h1 {
+            color: #ffffff;
+        }
+
+        .title-section p {
+            color: #b0b0b0;
+        }
+
+        .features-section {
+            background: #1a1a1a !important;
+        }
+
+        .feature-content h3 {
+            color: #ffffff;
+        }
+
+        .feature-list li {
+            color: #b0b0b0;
+        }
+
+        .theme-button {
+            background: #0066cc;
+            color: #ffffff;
+        }
+
+        .theme-button:hover {
+            background: #0055aa;
+        }
+
+        .divider-line {
+            background: #333;
+        }
+
+        .services-box .col-lg-4,
+        .services-box .col-md-6 {
+            display: flex;
+        }
+
+        /* New styles for added sections */
+        .industries-section,
+        .benefits-section,
+        .cta-section {
+            padding: 80px 0;
+        }
+
+        .industries-section {
+            background: #1a1a1a;
+        }
+
+        .benefits-section {
+            background: #121212;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .section-title p {
+            color: #b0b0b0;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .industry-grid,
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .industry-item {
+            background: #1e1e1e;
+            border-radius: 8px;
+            padding: 30px 20px;
+            text-align: center;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+
+        .industry-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            background: #252525;
+        }
+
+        .benefit-item {
+            background: #1e1e1e;
+            border-radius: 8px;
+            padding: 40px 30px;
+            text-align: center;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            background: #252525;
+        }
+
+        .industry-item i,
+        .benefit-item i {
+            font-size: 40px;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .industry-item h4,
+        .benefit-item h4 {
+            color: #ffffff;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .benefit-item p {
+            color: #b0b0b0;
+            font-size: 15px;
+        }
+
+        .cta-box {
+            background: #1e1e1e;
+            padding: 60px;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            border: 1px solid #333;
+        }
+
+        .cta-box h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .cta-box p {
+            color: #b0b0b0;
+            margin-bottom: 30px;
+            font-size: 18px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cta-button {
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button.primary {
+            background: #ffffff;
+            color: #121212;
+        }
+
+        .cta-button.secondary {
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+
+            .industry-grid,
+            .benefits-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+
+            .cta-box {
+                padding: 40px 20px;
+            }
+
+            .cta-box h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="ip-container" class="ip-container">
+        <!-- initial loader -->
+        <div class="ip-header">
+
+            <p class="ip-logo">
+                <img src="images/industrial-automation-logo.png" alt="">
+            </p>
+
+            <div class="ip-loader">
+                <svg class="ip-inner" width="100px" height="100px" viewBox="0 0 80 80">
+                    <path class="ip-loader-circlebg"
+                        d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z" />
+                    <path id="ip-loader-circle" class="ip-loader-circle"
+                        d="M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z" />
+                </svg>
+            </div>
+
+        </div>
+
+        <!-- Container -->
+        <div id="container">
+
+            <!-- Header
+		    ================================================== -->
+            <header class="clearfix">
+
+                <div class="logo">
+                    <a href="index.html"><img src="images/industrial-automation-logo.png" alt=""></a>
+                </div>
+
+                <div class="header-line">
+                    <a class="open-menu-toggle" href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                    <div class="social-line">
+                        <ul class="social-list">
+                            <li>
+                                <a href="https://m.facebook.com/profile.php?id=61572317887259&name=xhp_nt"><i
+                                        class="fab fa-facebook-square"></i></a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.instagram.com/excellent_ion?igsh=MWZ3c3EyaHppb3hkNA%3D%3D&utm_source=qr"><i
+                                        class="fab fa-instagram"></i></a>
+                            </li>
+                            <li>
+                                <a href="https://x.com/Ex_ionn"><img src="images/twitter1.png"
+                                        style="width: 11px; height: 11px; margin-bottom: 4px;"></img></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="copyright-line">
+                        <p><span class="copyright-cc">©</span>Ex-ion 2025</p>
+                    </div>
+                </div>
+
+                <nav class="nav-menu-box">
+                    <ul class="navigation-menu-list">
+                        <li>
+                            <a href="index.html"><span><em>Home</em></span></a>
+                        </li>
+
+                        <li>
+                            <a href="about.html"><span><em>About Us</em></span></a>
+                        </li>
+                        <li>
+                            <a href="software.html"><span><em>Software Solutions</em></span></a>
+                        </li>
+                        <li>
+                            <a href="portfolio.html"><span><em>Industrial Services</em></span></a>
+                        </li>
+
+                        <li>
+                            <a href="blog.html"><span><em> Industrial Products</em></span></a>
+                        </li>
+                        <li>
+                            <a href="contact.html"><span><em>Contact Us</em></span></a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </header>
+            <!-- End Header -->
+
+            <div id="content">
+
+                <!-- page-banner-section 
+				================================================== -->
+                <section class="page-banner-section">
+                    <div class="container">
+                        <h1 style="font-size: 50px; line-height: 55px;">Smart, Scalable Software to Power Your Business
+                        </h1>
+                        <p style="font-size: 15px; margin-top: 20px;">From mobile apps to enterprise systems — we build
+                            software that adapts to your industry, goals, and growth.</p>
+                    </div>
+                    <div class="info-box">
+                        <p>
+                            <i class="fa fa-globe"></i>
+                            <a href="https://www.ex-ion.com" style="color: white;">www.ex-ion.com</a> <span
+                                class="divider-line"></span>
+
+                            <i class="fa fa-envelope-square"></i>
+                            <a href="mailto:sales@ex-ion.com" style="color: white;">sales@ex-ion.com</a>
+                        </p>
+                    </div>
+                </section>
+                <!-- End page-banner section -->
+
+                <!-- services-section 
+				================================================== -->
+                <section class="services-section" style="padding: 100px 0;">
+                    <div class="container">
+                        <div class="title-section">
+                            <h2>Our Software Services</h2>
+                        </div>
+                        <div class="services-box">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="software-service-card">
+                                        <i class="fas fa-laptop-code"></i>
+                                        <h3>Custom Software Development</h3>
+                                        <p>Tailored desktop or web-based software built for your unique processes and
+                                            workflows.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="software-service-card">
+                                        <i class="fas fa-mobile-alt"></i>
+                                        <h3>Mobile App Development</h3>
+                                        <p>Intuitive, cross-platform mobile apps for iOS and Android, built for
+                                            performance and scale.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="software-service-card">
+                                        <i class="fas fa-globe"></i>
+                                        <h3>Web Application Development</h3>
+                                        <p>Secure and responsive web platforms for e-commerce, SaaS, and internal tools.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="software-service-card">
+                                        <i class="fas fa-cloud"></i>
+                                        <h3>SaaS Product Development</h3>
+                                        <p>Cloud-based software-as-a-service solutions — scalable, secure, and
+                                            subscription-ready.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="software-service-card">
+                                        <i class="fas fa-plug"></i>
+                                        <h3>API Development & Integration</h3>
+                                        <p>Build or integrate robust APIs to connect your systems, partners, or
+                                            third-party services.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="software-service-card">
+                                        <i class="fas fa-paint-brush"></i>
+                                        <h3>UI/UX Design & Prototyping</h3>
+                                        <p>Functional, user-centered interface designs with high-quality wireframes and
+                                            prototypes.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="software-service-card">
+                                        <i class="fas fa-cogs"></i>
+                                        <h3>Software Maintenance & Support</h3>
+                                        <p>Long-term care, updates, and performance tuning to ensure seamless operation.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End services-section -->
+
+                <!-- industries-section -->
+                <section class="industries-section">
+                    <div class="container">
+                        <div class="section-title">
+                            <h2>Industries We Serve</h2>
+                            <p>Ex-ion software adapts to <em>you</em> — not the other way around. We're
+                                industry-agnostic. No matter your domain, we bring scalable, efficient solutions.</p>
+                        </div>
+                        <div class="industry-grid">
+                            <div class="industry-item">
+                                <i class="fas fa-hospital"></i>
+                                <h4>Healthcare</h4>
+                            </div>
+                            <div class="industry-item">
+                                <i class="fas fa-home"></i>
+                                <h4>Real Estate</h4>
+                            </div>
+                            <div class="industry-item">
+                                <i class="fas fa-industry"></i>
+                                <h4>Manufacturing</h4>
+                            </div>
+                            <div class="industry-item">
+                                <i class="fas fa-shopping-cart"></i>
+                                <h4>E-commerce</h4>
+                            </div>
+                            <div class="industry-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <h4>Education</h4>
+                            </div>
+                            <div class="industry-item">
+                                <i class="fas fa-truck"></i>
+                                <h4>Logistics</h4>
+                            </div>
+                            <div class="industry-item">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <h4>Fintech</h4>
+                            </div>
+                            <div class="industry-item">
+                                <i class="fas fa-utensils"></i>
+                                <h4>F&B / Hospitality</h4>
+                            </div>
+                            <div class="industry-item">
+                                <i class="fas fa-building"></i>
+                                <h4>Enterprise / Gov</h4>
+                            </div>
+                            <div class="industry-item">
+                                <i class="fas fa-cogs"></i>
+                                <h4>Any Custom Industry</h4>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End industries-section -->
+
+                <!-- benefits-section -->
+                <section class="benefits-section">
+                    <div class="container">
+                        <div class="section-title">
+                            <h2>Why Choose Ex-ion</h2>
+                            <p>We combine technical expertise with business understanding to deliver software that
+                                drives real results.</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="benefit-item">
+                                    <i class="fas fa-expand"></i>
+                                    <p>Scalable software tailored to your business goals</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="benefit-item">
+                                    <i class="fas fa-users"></i>
+                                    <p>Experienced full-stack development team</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="benefit-item">
+                                    <i class="fas fa-random"></i>
+                                    <p>Industry-agnostic, flexible approach</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="benefit-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <p>Security-first design & architecture</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="benefit-item">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <p>Proven process from idea to deployment</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="benefit-item">
+                                    <i class="fas fa-headset"></i>
+                                    <p>Long-term support & maintenance</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <style>
+                    .benefits-section {
+                        padding: 80px 0;
+                        background: #121212;
+                    }
+
+                    .benefits-section .row {
+                        --bs-gutter-y: 1.5rem;
+                    }
+
+                    .benefit-item {
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 30px;
+                        background: #1e1e1e;
+                        border-radius: 8px;
+                        border: 1px solid #333;
+                        transition: all 0.3s ease;
+                    }
+
+                    .benefit-item:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+                        background: #252525;
+                    }
+
+                    .benefit-item i {
+                        font-size: 40px;
+                        color: #ffffff;
+                        margin-bottom: 20px;
+                        flex-shrink: 0;
+                    }
+
+                    .benefit-item p {
+                        color: #b0b0b0;
+                        font-size: 15px;
+                        margin-bottom: 0;
+                        flex-grow: 1;
+                    }
+
+                    /* CTA Box Styles */
+                    .cta-box {
+                        background: #1e1e1e;
+                        padding: 60px;
+                        border-radius: 8px;
+                        text-align: center;
+                        max-width: 900px;
+                        margin: 0 auto;
+                        border: 1px solid #333;
+                    }
+
+                    .cta-box h2 {
+                        font-size: 36px;
+                        margin-bottom: 20px;
+                        color: #ffffff;
+                    }
+
+                    .cta-box p {
+                        color: #b0b0b0;
+                        margin-bottom: 30px;
+                        font-size: 18px;
+                    }
+
+                    .cta-buttons {
+                        display: flex;
+                        justify-content: center;
+                        gap: 20px;
+                        flex-wrap: wrap;
+                    }
+
+                    .cta-button {
+                        padding: 12px 30px;
+                        border-radius: 4px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        transition: all 0.3s ease;
+                    }
+
+                    .cta-button.primary {
+                        background: #ffffff;
+                        color: #121212;
+                    }
+
+                    .cta-button.secondary {
+                        background: transparent;
+                        color: #ffffff;
+                        border: 2px solid #ffffff;
+                    }
+
+                    .cta-button:hover {
+                        transform: translateY(-3px);
+                        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                    }
+
+                    @media (max-width: 768px) {
+                        .cta-box {
+                            padding: 40px 20px;
+                        }
+
+                        .cta-box h2 {
+                            font-size: 28px;
+                        }
+                    }
+                </style>
+                <!-- End benefits-section -->
+
+                <!-- cta-section -->
+                <section class="cta-section">
+                    <div class="container">
+                        <div class="cta-box">
+                            <h2>Let's Build Something Powerful Together</h2>
+                            <p>Talk to our experts or request a personalized demo.</p>
+                            <div class="cta-buttons">
+                                <a href="mailto:sales@ex-ion.com" class="cta-button primary">Talk to an Expert</a>
+                                <a href="contact.html" class="cta-button secondary">Request a Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- End cta-section -->
+
+                <!-- footer 
+				================================================== -->
+                <footer class="template-footer">
+                    <a class="go-top" href="#">
+                        <i class="far fa-arrow-alt-circle-up"></i>
+                    </a>
+
+                    <div class="widget-part-area">
+                        <div class="footer-widget-line">
+                            <div class="image-widget">
+                                <a href="index.html"><img src="images/industrial-automation-logo.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="footer-widget-line">
+                            <h5 style="margin-bottom: 35px;">Address</h5>
+                            <ul class="custom-list">
+                                <li style="color: white ; text-align: start;">Akhrabiyah,<br>Al-Khobar
+                                    31952</li>
+                            </ul>
+                        </div>
+                        <div class="footer-widget-line">
+                            <h5 style="margin-top: 30px;">Connect</h5>
+                            <ul class="custom-list">
+                                <li><a
+                                        href="https://www.instagram.com/excellent_ion?igsh=MWZ3c3EyaHppb3hkNA%3D%3D&utm_source=qr">Instagram</a>
+                                </li>
+                                <li><a
+                                        href="https://m.facebook.com/profile.php?id=61572317887259&name=xhp_nt_">Facebook</a>
+                                </li>
+                                <li><a href="https://x.com/Ex_ionn">Twitter</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-widget-line">
+                            <h5 style="margin-top: 90px;">Explore</h5>
+                            <ul class="custom-list">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="portfolio.html">Services</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="blog.html">Products</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-widget-line">
+                            <h5>Get in Touch</h5>
+                            <ul class="custom-list">
+                                <li><a href="mailto:sales@ex-ion.com"> sales@ex-ion.com</a></li>
+                                <li><a href="#">+966 056 055 4660</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End footer -->
+
+            </div>
+
+        </div>
+        <!-- End Container -->
+    </div>
+
+    <!--build:js js/royarch-plugins.min.js -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.migrate.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.nouislider.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.imagesloaded.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/pathLoader.js"></script>
+    <script src="js/jquery.themepunch.tools.min.js"></script>
+    <script src="js/jquery.themepunch.revolution.min.js"></script>
+    <script src="js/jquery.appear.js"></script>
+    <!-- endbuild -->
+    <script src="js/jquery.countTo.js"></script>
+    <script
+        src="http://maps.google.com/maps/api/js?key=AIzaSyCiqrIen8rWQrvJsu-7f4rOta0fmI5r2SI&amp;sensor=false&amp;language=en"></script>
+    <script src="js/gmap3.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
