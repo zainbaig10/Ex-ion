@@ -119,24 +119,121 @@
 							<a href="contact.html"><span><em>Contact Us</em></span></a>
 						</li>
 					</ul>
+					<div class="language-switch">
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="ar">AR</button>
+</div>
 				</nav>
+<style>.language-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    background: #5a5a5a;
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1000;
+}
 
+.lang-btn {
+    background: transparent;
+    border: none;
+    color: #ccc;
+    padding: 8px 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lang-btn.active {
+    background: #d92828;
+    color: white;
+}
+
+.lang-btn:hover {
+    background: #717171;
+    color: white;
+}
+
+/* RTL adjustments for Arabic */
+</style>
 			</header>
 			<!-- End Header -->
 
 			<div id="content">
 
 
-				<div class="info-box">
-					<p>
-						<i class="fa fa-globe"></i>
-						<a href="https://www.ex-ion.com" style="color: white;">www.ex-ion.com</a> <span
-							class="divider-line"></span>
+				 <div class="info-box">
+    <p>
+        <i class="fa fa-globe"></i>
+        <a href="https://www.ex-ion.com" style="color: white;">www.ex-ion.com</a> <span
+            class="divider-line"></span>
 
-						<i class="fa fa-envelope-square"></i>
-						<a href="mailto:sales@ex-ion.com" style="color: white;">sales@ex-ion.com</a>
-					</p>
-				</div>
+        <i class="fa fa-envelope-square"></i>
+        <a href="mailto:sales@ex-ion.com" style="color: white;">sales@ex-ion.com</a>
+        <span class="divider-line"></span>
+        
+        <!-- Language Switcher Button -->
+      
+    </p>
+</div>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const languageToggle = document.getElementById('languageToggle');
+    const langText = document.querySelector('.lang-text');
+    const langDropdown = document.querySelector('.language-dropdown');
+    
+    // Check for saved language preference or default to English
+    const currentLang = localStorage.getItem('preferred-lang') || 'en';
+    updateLanguage(currentLang);
+    
+    // Handle language selection
+    document.querySelectorAll('.language-dropdown a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const lang = this.getAttribute('data-lang');
+            updateLanguage(lang);
+            langDropdown.style.display = 'none';
+        });
+    });
+    
+    function updateLanguage(lang) {
+        // Save preference
+        localStorage.setItem('preferred-lang', lang);
+        
+        // Update button text
+        langText.textContent = lang === 'en' ? 'EN' : 'AR';
+        
+        // Here you would typically load language files or update page content
+        // For a real implementation, you would use i18n library or fetch JSON translations
+        console.log('Language changed to:', lang);
+        
+        // For RTL support when Arabic is selected
+        if (lang === 'ar') {
+            document.body.setAttribute('dir', 'rtl');
+            document.body.classList.add('rtl');
+        } else {
+            document.body.removeAttribute('dir');
+            document.body.classList.remove('rtl');
+        }
+        
+        // In a real implementation, you would call a function to update all text content
+        // updatePageContent(lang);
+    }
+    
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!languageToggle.contains(e.target) && !langDropdown.contains(e.target)) {
+            langDropdown.style.display = 'none';
+        }
+    });
+});
+</script>
 
 				<!-- slider-section 
 				================================================== -->
@@ -931,7 +1028,702 @@
 		});	/*ready*/
 	</script>
 
+<script>
+// Translation data
+const translations = {
+  "home": {
+    "welcome": { "en": "Welcome to Ex-ion", "ar": "مرحباً بكم في إكسيون" },
+    "tagline": {
+      "en": "Transforming Businesses with Innovative<br> Solutions in Saudi Arabia",
+      "ar": "تحويل الأعمال من خلال حلول<br> مبتكرة في المملكة العربية السعودية"
+    },
+    "partner": {
+      "en": "Your partner in Software solutions, Automation, and Material Excellence driving your success",
+      "ar": "شريكك في حلول البرمجيات والأتمتة والمواد المتميزة لدفع نجاحك"
+    },
+    "sections": {
+      "software_development": {
+        "title": { "en": "Software Development", "ar": "تطوير البرمجيات" },
+        "description": {
+          "en": "Custom software, mobile apps, and scalable web platforms tailored to accelerate your business.",
+          "ar": "برامج مخصصة وتطبيقات جوال ومنصات ويب قابلة للتوسع مصممة لتسريع نمو عملك."
+        }
+      },
+      "mechanical_solutions": {
+        "title": { "en": "Mechanical Solutions", "ar": "الحلول الميكانيكية" },
+        "description": {
+          "en": "Streamlined your industrial operations",
+          "ar": "تبسيط عملياتك الصناعية"
+        }
+      },
+      "electrical_instrumentation": {
+        "title": { "en": "Electrical & Instrumentation", "ar": "الكهرباء والأجهزة" },
+        "description": {
+          "en": "Power your operations with the industry's finest",
+          "ar": "قم بتشغيل عملياتك بأفضل ما في الصناعة"
+        }
+      },
+      "automation_controls": {
+        "title": { "en": "Automation & Controls", "ar": "الأتمتة وأنظمة التحكم" },
+        "description": {
+          "en": "Stay ahead with advanced automation technologies",
+          "ar": "ابقَ في المقدمة مع تقنيات الأتمتة المتقدمة"
+        }
+      },
+      "it_communication": {
+        "title": { "en": "IT & Communication", "ar": "تقنية المعلومات والاتصالات" },
+        "description": {
+          "en": "Your business deserves IT solutions that work as hard as you do",
+          "ar": "عملك يستحق حلول تقنية معلومات تعمل بجد مثلك"
+        }
+      }
+    },
+    "feature_trio": {
+      "software_solutions": {
+        "title": { "en": "Software Solutions", "ar": "الحلول البرمجية" },
+        "text": {
+          "en": "Custom-built apps, websites, and tools that scale with your business.",
+          "ar": "تطبيقات ومواقع وأدوات مخصّصة تتوسع مع نمو عملك."
+        }
+      },
+      "automation_electrical_systems": {
+        "title": { "en": "Automation & Electrical Systems", "ar": "أنظمة الأتمتة والكهرباء" },
+        "text": {
+          "en": "Streamlined operations and optimized control systems",
+          "ar": "عمليات مبسطة وأنظمة تحكم محسّنة"
+        }
+      },
+      "material_solutions": {
+        "title": { "en": "Material Solutions", "ar": "حلول المواد" },
+        "text": {
+          "en": "High-quality materials sourced for performance and durability",
+          "ar": "مواد عالية الجودة مختارة للأداء والمتانة"
+        }
+      }
+    },
+    "about_mission": {
+      "en": "At Ex-ion, we deliver smart, customized technology to help your business thrive. From powerful software platforms to intelligent automation systems, we blend innovation with reliability to give you",
+      "ar": "في إكسيون، نقدم تقنيات ذكية ومخصصة لمساعدة عملك على الازدهار. من المنصات البرمجية القوية إلى أنظمة الأتمتة الذكية، نمزج بين الابتكار والموثوقية لنقدم لك"
+    },
+    "integrated_statement": {
+      "en": "At Ex-ion, we bring together specialized software development, advanced automation, and reliable material sourcing—all under one roof. Our tailored services are designed to meet your unique business needs, backed by proven experience, trusted global partnerships, and a commitment to dedicated support. Whether you need scalable IT solutions or robust industrial systems, we deliver with precision and reliability.",
+      "ar": "في إكسيون، نجمع بين تطوير البرمجيات المتخصص والأتمتة المتقدمة وتوريد المواد الموثوق - كل ذلك تحت سقف واحد. خدماتنا المخصصة مصممة لتلبية احتياجات عملك الفريدة، مدعومة بخبرة مثبتة وشراكات عالمية موثوقة والتزام بالدعم المستمر. سواء كنت تحتاج حلول تقنية معلومات قابلة للتوسع أو أنظمة صناعية قوية، فإننا نقدمها بدقة وموثوقية."
+    },
+    "empowering": {
+      "en": "Empowering your success through innovative software and automation solutions",
+      "ar": "تمكين نجاحك من خلال حلول برمجية وأتمتة مبتكرة"
+    },
+    "commitment": {
+      "en": "Our commitment is simple — modern solutions, expert service, and long-term support.",
+      "ar": "التزامنا بسيط - حلول عصرية، خدمة احترافية، ودعم طويل الأمد."
+    },
+    "vision": {
+      "en": "To empower modern businesses with cutting-edge software and automation solutions. We aim to simplify workflows, enhance operational efficiency, and drive sustainable growth through intelligent technology and expert service.",
+      "ar": "تمكين الأعمال الحديثة من خلال حلول برمجية وأتمتة متطورة. نهدف إلى تبسيط سير العمل وتعزيز الكفاءة التشغيلية ودفع النمو المستدام عبر التكنولوجيا الذكية والخدمة المتخصصة."
+    },
+    "cta": {
+      "en": "Ready to take your business to the next level? Let's build smarter, together.",
+      "ar": "هل أنت مستعد للارتقاء بأعمالك إلى المستوى التالي؟ لنبنِ معاً بشكل أذكى."
+    },
+    "buttons": {
+      "learn_more": { "en": "Learn More", "ar": "اعرف المزيد" },
+      "why_exion": { "en": "Why Ex-ion?", "ar": "لماذا إكسيون؟" },
+      "our_mission": { "en": "Our Mission", "ar": "مهمتنا" },
+      "call_to_action": { "en": "Call to Action", "ar": "دعوة للعمل" },
+      "contact_us": { "en": "Contact Us", "ar": "اتصل بنا" }
+    }
+  },
+  "navbar": {
+    "home": { "en": "Home", "ar": "الرئيسية" },
+    "about_us": { "en": "About Us", "ar": "من نحن" },
+    "software_solutions": { "en": "Software Solutions", "ar": "الحلول البرمجية" },
+    "industrial_services": { "en": "Industrial Services", "ar": "الخدمات الصناعية" },
+    "industrial_products": { "en": "Industrial Products", "ar": "المنتجات الصناعية" },
+    "contact_us": { "en": "Contact Us", "ar": "تواصل معنا" }
+  },
+  "footer": {
+    "address_title": { "en": "Address", "ar": "العنوان" },
+    "address_content": { "en": "Akhrabiyah,<br>Al-Khobar 31952", "ar": "العقربية،<br>الخبر ٣١٩٥٢" },
+    "connect_title": { "en": "Connect", "ar": "تواصل معنا" },
+    "explore_title": { "en": "Explore", "ar": "استكشف" },
+    "contact_title": { "en": "Get in Touch", "ar": "ابق على تواصل" },
+    "phone": { "en": "+966 55 257 7976", "ar": "+٩٦٦ ٥٥ ٢٥٧ ٧٩٧٦" },
+    "social": {
+      "instagram": { "en": "Instagram", "ar": "إنستغرام" },
+      "facebook": { "en": "Facebook", "ar": "فيسبوك" },
+      "twitter": { "en": "Twitter", "ar": "تويتر" }
+    }
+  }
+};
 
+// Utility function to convert English numbers to Arabic
+function convertToArabicNumbers(text) {
+    const arabicNumbers = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
+    return text.replace(/[0-9]/g, function(digit) {
+        return arabicNumbers[parseInt(digit)];
+    });
+}
+
+// Language switcher functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const langButtons = document.querySelectorAll('.lang-btn');
+    
+    // Check for saved language preference or default to English
+    const currentLang = localStorage.getItem('preferred-lang') || 'en';
+    updateLanguage(currentLang);
+    
+    // Handle language button clicks
+    langButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const lang = this.getAttribute('data-lang');
+            updateLanguage(lang);
+        });
+    });
+    
+    function updateLanguage(lang) {
+        // Save preference
+        localStorage.setItem('preferred-lang', lang);
+        
+        // Update button states
+        langButtons.forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+        });
+        
+        // Update text content
+        updatePageContent(lang);
+        
+        // Handle RTL/LTR layout
+        if (lang === 'ar') {
+            document.body.setAttribute('dir', 'rtl');
+            document.body.classList.add('rtl');
+            document.documentElement.setAttribute('lang', 'ar');
+            
+            // Add RTL-specific CSS for checkmarks
+            addRTLStyles();
+        } else {
+            document.body.removeAttribute('dir');
+            document.body.classList.remove('rtl');
+            document.documentElement.setAttribute('lang', 'en');
+            
+            // Remove RTL-specific CSS
+            removeRTLStyles();
+        }
+    }
+    
+    function addRTLStyles() {
+        // Create style element for RTL adjustments
+        const style = document.createElement('style');
+        style.id = 'rtl-styles';
+        style.textContent = `
+            /* Fix for checkmark in feature list */
+            .rtl section.about-section .about-box ul.feature-list li:before {
+                float: right !important;
+                margin-right: 0 !important;
+                margin-left: 16px !important;
+            }
+            
+            /* Fix for tabs structure */
+            .rtl .nav-tabs {
+                direction: ltr; /* Keep tab order LTR even in RTL */
+                justify-content: flex-start;
+            }
+            
+            .rtl .nav-tabs .nav-item {
+                margin-left: 0.5rem;
+                margin-right: 0;
+            }
+            
+            /* Adjust tab content alignment */
+            .rtl .tab-content .row {
+                direction: ltr; /* Keep content order consistent */
+            }
+            
+            .rtl .tab-content p {
+                text-align: right;
+            }
+            
+            /* Additional RTL adjustments for tabs */
+            .rtl .nav-tabs .nav-link {
+                text-align: center;
+            }
+        `;
+        document.head.appendChild(style);
+    }
+    
+    function removeRTLStyles() {
+        const rtlStyles = document.getElementById('rtl-styles');
+        if (rtlStyles) {
+            rtlStyles.remove();
+        }
+    }
+    
+    function updatePageContent(lang) {
+        // Update navigation menu - targeting the exact structure
+        const navLinks = [
+            { selector: '.navigation-menu-list li:nth-child(1) a em', key: 'navbar.home' },
+            { selector: '.navigation-menu-list li:nth-child(2) a em', key: 'navbar.about_us' },
+            { selector: '.navigation-menu-list li:nth-child(3) a em', key: 'navbar.software_solutions' },
+            { selector: '.navigation-menu-list li:nth-child(4) a em', key: 'navbar.industrial_services' },
+            { selector: '.navigation-menu-list li:nth-child(5) a em', key: 'navbar.industrial_products' },
+            { selector: '.navigation-menu-list li:nth-child(6) a em', key: 'navbar.contact_us' }
+        ];
+        
+        navLinks.forEach(nav => {
+            const element = document.querySelector(nav.selector);
+            if (element) {
+                const keys = nav.key.split('.');
+                element.textContent = translations[keys[0]][keys[1]][lang];
+            }
+        });
+        
+        // Update hero section slides
+        const heroTitle1 = document.querySelector('#slide-149-layer-2');
+        if (heroTitle1) {
+            heroTitle1.textContent = translations.home.welcome[lang];
+        }
+        
+        const heroTitle2 = document.querySelector('#slide-150-layer-2');
+        if (heroTitle2) {
+            heroTitle2.innerHTML = translations.home.tagline[lang];
+        }
+        
+        // Update main services section title
+        const servicesTitle = document.querySelector('.services-section7 .title-box h2');
+        if (servicesTitle) {
+            servicesTitle.textContent = translations.home.partner[lang];
+        }
+        
+        // Update service cards - targeting by href and order
+        const serviceUpdates = [
+            { href: 'software.html', titleKey: 'software_development', descKey: 'software_development' },
+            { href: 'portfolio.html', titleKey: 'mechanical_solutions', descKey: 'mechanical_solutions' },
+            { href: 'portfolio.html', titleKey: 'electrical_instrumentation', descKey: 'electrical_instrumentation' },
+            { href: 'portfolio.html', titleKey: 'automation_controls', descKey: 'automation_controls' },
+            { href: 'portfolio.html', titleKey: 'it_communication', descKey: 'it_communication' }
+        ];
+        
+        const serviceCards = document.querySelectorAll('.services-post7');
+        serviceCards.forEach((card, index) => {
+            if (index < serviceUpdates.length) {
+                const update = serviceUpdates[index];
+                const titleEl = card.querySelector('h4');
+                const descEl = card.querySelector('p');
+                
+                if (titleEl && translations.home.sections[update.titleKey]) {
+                    titleEl.textContent = translations.home.sections[update.titleKey].title[lang];
+                }
+                if (descEl && translations.home.sections[update.descKey]) {
+                    descEl.textContent = translations.home.sections[update.descKey].description[lang];
+                }
+            }
+        });
+        
+        // Update about section
+        const aboutTitle = document.querySelector('.about-content h3');
+        if (aboutTitle) {
+            aboutTitle.textContent = translations.home.empowering[lang];
+        }
+        
+        const aboutText = document.querySelector('.about-content p');
+        if (aboutText) {
+            aboutText.textContent = translations.home.about_mission[lang];
+        }
+        
+        // Update feature list items
+        const featureItems = [
+            { selector: '.feature-list li:nth-child(1) .heading', key: 'home.feature_trio.software_solutions.title' },
+            { selector: '.feature-list li:nth-child(1) .description', key: 'home.feature_trio.software_solutions.text' },
+            { selector: '.feature-list li:nth-child(2) .heading', key: 'home.feature_trio.automation_electrical_systems.title' },
+            { selector: '.feature-list li:nth-child(2) .description', key: 'home.feature_trio.automation_electrical_systems.text' },
+            { selector: '.feature-list li:nth-child(3) .heading', key: 'home.feature_trio.material_solutions.title' },
+            { selector: '.feature-list li:nth-child(3) .description', key: 'home.feature_trio.material_solutions.text' }
+        ];
+        
+        featureItems.forEach(item => {
+            const element = document.querySelector(item.selector);
+            if (element) {
+                const keys = item.key.split('.');
+                let value = translations;
+                keys.forEach(k => value = value[k]);
+                element.textContent = value[lang];
+            }
+        });
+        
+        // Update commitment line
+        const commitmentLine = document.querySelector('.commitment-line');
+        if (commitmentLine) {
+            commitmentLine.textContent = translations.home.commitment[lang];
+        }
+        
+        // Update Learn More button
+        const learnMoreBtn = document.querySelector('.about-content .btn');
+        if (learnMoreBtn) {
+            learnMoreBtn.textContent = translations.home.buttons.learn_more[lang];
+        }
+        
+        // Update tabs
+        const tabButtons = [
+            { selector: '#choose-tab', key: 'home.buttons.why_exion' },
+            { selector: '#mission-tab', key: 'home.buttons.our_mission' },
+            { selector: '#vision-tab', key: 'home.buttons.call_to_action' }
+        ];
+        
+        tabButtons.forEach(tab => {
+            const element = document.querySelector(tab.selector);
+            if (element) {
+                const keys = tab.key.split('.');
+                let value = translations;
+                keys.forEach(k => value = value[k]);
+                element.textContent = value[lang];
+            }
+        });
+        
+        // Update tab content
+        const whyExionContent = document.querySelector('#choose .row .col-sm-8 p');
+        if (whyExionContent) {
+            whyExionContent.textContent = translations.home.integrated_statement[lang];
+        }
+        
+        const missionContent = document.querySelector('#mission .row .col-sm-8 p');
+        if (missionContent) {
+            missionContent.textContent = translations.home.vision[lang];
+        }
+        
+        const ctaContent = document.querySelector('#vision .row .col-sm-8 p');
+        if (ctaContent) {
+            ctaContent.textContent = translations.home.cta[lang];
+        }
+        
+        const ctaButton = document.querySelector('#vision .row .col-sm-8 a');
+        if (ctaButton) {
+            ctaButton.textContent = translations.home.buttons.contact_us[lang];
+        }
+        
+        // Update footer sections
+        const footerUpdates = [
+            { selector: '.footer-widget-line:nth-child(2) h5', key: 'footer.address_title' },
+            { selector: '.footer-widget-line:nth-child(2) .custom-list li', key: 'footer.address_content', isHTML: true },
+            { selector: '.footer-widget-line:nth-child(3) h5', key: 'footer.connect_title' },
+            { selector: '.footer-widget-line:nth-child(4) h5', key: 'footer.explore_title' },
+            { selector: '.footer-widget-line:nth-child(5) h5', key: 'footer.contact_title' }
+        ];
+        
+        footerUpdates.forEach(update => {
+            const element = document.querySelector(update.selector);
+            if (element && translations.footer) {
+                const keys = update.key.split('.');
+                const value = translations[keys[0]][keys[1]][lang];
+                if (value) {
+                    if (update.isHTML) {
+                        element.innerHTML = value;
+                    } else {
+                        element.textContent = value;
+                    }
+                }
+            }
+        });
+        
+        // Update phone number with proper Arabic numerals
+        const phoneElements = document.querySelectorAll('a[href="tel:+966552577976"]');
+        phoneElements.forEach(phoneEl => {
+            if (lang === 'ar') {
+                phoneEl.textContent = translations.footer.phone.ar;
+            } else {
+                phoneEl.textContent = translations.footer.phone.en;
+            }
+        });
+        
+        // Update footer navigation links
+        const footerNavLinks = document.querySelectorAll('.footer-widget-line:nth-child(4) .custom-list a');
+        const footerNavKeys = ['home', 'about_us', 'software_solutions', 'industrial_services', 'industrial_products', 'contact_us'];
+        
+        footerNavLinks.forEach((link, index) => {
+            if (index < footerNavKeys.length) {
+                const key = footerNavKeys[index];
+                if (translations.navbar[key]) {
+                    link.textContent = translations.navbar[key][lang];
+                }
+            }
+        });
+        
+        // Update social links text
+        const socialLinks = document.querySelectorAll('.footer-widget-line:nth-child(3) .custom-list a');
+        const socialKeys = ['instagram', 'facebook', 'twitter'];
+        
+        socialLinks.forEach((link, index) => {
+            if (index < socialKeys.length) {
+                const key = socialKeys[index];
+                if (translations.footer.social[key]) {
+                    link.textContent = translations.footer.social[key][lang];
+                }
+            }
+        });
+    }
+});
+</script>
+
+<style>
+/* Import Arabic fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Tajawal:wght@300;400;500;700&display=swap');
+
+/* Language switcher - keep existing positioning */
+.language-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    background: #5a5a5a;
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    color: #ccc;
+    padding: 8px 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lang-btn.active {
+    background: #d92828;
+    color: white;
+}
+
+.lang-btn:hover:not(.active) {
+    background: #717171;
+    color: white;
+}
+
+/* RTL Base - Only apply font and text direction */
+.rtl {
+    font-family: 'Cairo', 'Tajawal', Arial, sans-serif !important;
+}
+
+/* RTL Text alignment - Only for text, don't change layout */
+.rtl .services-post7 h4,
+.rtl .services-post7 p {
+    text-align: right;
+}
+
+.rtl .about-content h3,
+.rtl .about-content p,
+.rtl .commitment-line {
+    text-align: right;
+}
+
+.rtl .tab-content p {
+    text-align: right;
+}
+
+.rtl .footer-widget-line h5,
+.rtl .footer-widget-line .custom-list {
+    text-align: right;
+}
+
+/* Navigation menu RTL */
+.rtl .navigation-menu-list a {
+    text-align: right;
+}
+
+/* Service cards - only flip icons, keep card layout */
+.rtl .icon-title-wrapper {
+    flex-direction: row-reverse;
+}
+
+.rtl .services-post7 img[style*="margin-right"] {
+    margin-right: 0 !important;
+    margin-left: 15px !important;
+}
+
+/* Feature list RTL - only text alignment */
+.rtl .feature-list .heading {
+    text-align: right;
+}
+
+.rtl .feature-list .description {
+    text-align: right;
+    margin-right: 0;
+    margin-left: 40px;
+}
+
+/* Tab buttons RTL */
+.rtl .nav-tabs {
+    direction: ltr; /* This keeps the tab order from left to right */
+    justify-content: flex-start;
+}
+
+.rtl .nav-tabs .nav-item {
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+
+.rtl .nav-tabs .nav-link {
+    text-align: center;
+}
+
+/* Revolution Slider - Minimal RTL adjustments */
+.rtl .tp-caption {
+    text-align: right !important;
+}
+
+/* Only move language switcher position for RTL */
+.rtl .language-switch {
+    left: 20px;
+    right: auto;
+}
+
+/* Button text alignment */
+.rtl .btn {
+    font-family: 'Cairo', sans-serif;
+}
+
+/* Fix for checkmark in feature list - RTL version */
+.rtl section.about-section .about-box ul.feature-list li:before {
+    float: right !important;
+    margin-right: 0 !important;
+    margin-left: 16px !important;
+}
+
+/* Mobile adjustments - keep minimal */
+@media (max-width: 768px) {
+    .rtl .language-switch {
+        top: 10px;
+        left: 10px;
+        right: auto;
+    }
+    
+    .rtl .services-post7 h4 {
+        font-size: 16px;
+        text-align: right;
+    }
+    
+    .rtl .about-content h3 {
+        font-size: 22px;
+        text-align: right;
+    }
+    
+    /* Stack tabs vertically on mobile for RTL */
+    .rtl .nav-tabs {
+        flex-direction: column;
+    }
+    
+    .rtl .nav-tabs .nav-item {
+        margin-bottom: 0.5rem;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .rtl .services-post7 h4 {
+        font-size: 15px;
+    }
+    
+    .rtl .about-content h3 {
+        font-size: 20px;
+    }
+}
+
+/* Fix for service card icons - preserve existing styles but flip for RTL */
+.rtl .services-post7 img[src*="development.png"],
+.rtl .services-post7 img[src*="automated-assembly-line.png"],
+.rtl .services-post7 img[src*="power-distribution-automation.png"],
+.rtl .services-post7 img[src*="industrial-robotic-automation.png"],
+.rtl .services-post7 img[src*="iot-industrial-automation.png"] {
+    margin-right: 0 !important;
+    margin-left: 15px !important;
+}
+.rtl .nav-tabs {
+    direction: ltr; /* Keep tab order LTR even in RTL */
+    justify-content: flex-start;
+}
+
+.rtl .nav-tabs .nav-item {
+    margin-left: 0;
+    margin-right: 0;
+    border-right: none;
+    border-left: 1px solid #515151;
+}
+
+.rtl .nav-tabs li:first-child {
+    border-left: none;
+    border-right: 1px solid #515151;
+}
+
+.rtl .nav-tabs li {
+    text-align: center;
+    width: 33.33333%;
+}
+
+.rtl .nav-tabs li button {
+    width: 100%;
+    text-align: center;
+}
+
+/* Adjust tab content for RTL */
+.rtl .tab-content .row {
+    direction: ltr; /* Keep content order consistent */
+}
+
+.rtl .tab-content p {
+    text-align: right;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .rtl .nav-tabs {
+        flex-direction: row; /* Keep tabs horizontal on mobile */
+    }
+    
+    .rtl .tab-content .row {
+        flex-direction: column;
+    }
+    
+    .rtl .tab-content .col-sm-4,
+    .rtl .tab-content .col-sm-8 {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .rtl .tab-content img {
+        margin-bottom: 20px;
+    }
+}
+/* Ensure existing layout stays intact */
+.rtl .container,
+.rtl .row,
+.rtl .col-lg-4,
+.rtl .col-lg-6,
+.rtl .col-md-4,
+.rtl .col-sm-6,
+.rtl .col-sm-8 {
+    /* Don't override Bootstrap grid system */
+}
+
+/* Keep existing service card layout intact */
+.rtl .services-post7 {
+    display: flex;
+    flex-direction: column;
+    /* Keep all existing properties */
+}
+
+/* Tab content images - don't move them */
+.rtl .tab-pane .col-sm-4 img,
+.rtl .tab-pane .col-sm-8 {
+    /* Keep existing positioning */
+}
+</style>
 </body>
 
 </html>
+
+
+
+
+
+

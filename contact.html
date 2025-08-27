@@ -119,6 +119,46 @@
 							<a href="contact.html"><span><em>Contact Us</em></span></a>
 						</li>
 					</ul>
+								<div class="language-switch">
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="ar">AR</button>
+</div>
+				</nav>
+<style>.language-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    background: #5a5a5a;
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    color: #ccc;
+    padding: 8px 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lang-btn.active {
+    background: #d92828;
+    color: white;
+}
+
+.lang-btn:hover {
+    background: #717171;
+    color: white;
+}
+
+/* RTL adjustments for Arabic */
+</style>
 				</nav>
 
 			</header>
@@ -297,20 +337,7 @@ here to help bring your ideas to life.</p>
 						<i class="far fa-arrow-alt-circle-up"></i>
 					</a>
 
-					<!-- <div class="instagram-line">
-						<div class="container">
-							<ul class="insta-list">
-								<li><a href="#"><img src="upload/instagram/1.jpg" alt=""></a></li>
-								<li><a href="#"><img src="upload/instagram/2.jpg" alt=""></a></li>
-								<li><a href="#"><img src="upload/instagram/3.jpg" alt=""></a></li>
-								<li><a href="#"><img src="upload/instagram/4.jpg" alt=""></a></li>
-								<li><a href="#"><img src="upload/instagram/5.jpg" alt=""></a></li>
-								<li><a href="#"><img src="upload/instagram/6.jpg" alt=""></a></li>
-								<li><a href="#"><img src="upload/instagram/7.jpg" alt=""></a></li>
-								<li><a href="#"><img src="upload/instagram/8.png" alt=""></a></li>
-							</ul>
-						</div>
-					</div> -->
+					
 
 					<div class="widget-part-area">
 						<div class="footer-widget-line">
@@ -457,6 +484,667 @@ here to help bring your ideas to life.</p>
 			}
 		});
 	</script>
+	<script>// Translation data for contact page
+const translations = {
+  "contact_page": {
+    "title": {
+      "en": "Ex-ion ",
+      "ar": "  Ex-ion"
+    },
+    "page_banner": {
+      "heading": {
+        "en": "Get in Touch",
+        "ar": "تواصل معنا"
+      },
+      "subheading": {
+        "en": "Let's Start Something Great",
+        "ar": "لنبدأ شيئاً رائعاً"
+      },
+      "description": {
+        "en": "Have a question? Need a solution? Our team is here to help.",
+        "ar": "هل لديك سؤال؟ تحتاج إلى حل؟ فريقنا هنا لمساعدتك."
+      }
+    },
+    "intro_text": {
+      "en": "At Ex-ion, we're just a message away. Whether you're exploring a custom software solution, planning a digital transformation, or seeking expert advice, our team is here to help bring your ideas to life.",
+      "ar": "في إكسيون، نحن على بعد رسالة فقط. سواء كنت تستكشف حل برمجي مخصص، تخطط لتحول رقمي، أو تبحث عن مشورة خبيرة، فريقنا هنا لمساعدتك في تحويل أفكارك إلى واقع."
+    },
+    "contact_cards": {
+      "sales_specialist": {
+        "title": {
+          "en": "Sales Specialist",
+          "ar": "أخصائي المبيعات"
+        },
+        "name": {
+          "en": "Mustafa Mohammed",
+          "ar": "مصطفى محمد"
+        }
+      },
+      "technical_manager": {
+        "title": {
+          "en": "Technical Manager",
+          "ar": "المدير الفني"
+        },
+        "name": {
+          "en": "Zain Baig",
+          "ar": "زين بيغ"
+        }
+      },
+      "address": {
+        "title": {
+          "en": "Address",
+          "ar": "العنوان"
+        },
+        "text": {
+          "en": "Akhrabiyah, Al-Khobar 31952",
+          "ar": "العقربية، الخبر ٣١٩٥٢"
+        }
+      }
+    },
+    "contact_form": {
+      "title": {
+        "en": "Send message",
+        "ar": "إرسال رسالة"
+      },
+      "fields": {
+        "name": {
+          "en": "Name",
+          "ar": "الاسم"
+        },
+        "email": {
+          "en": "E-mail",
+          "ar": "البريد الإلكتروني"
+        },
+        "phone": {
+          "en": "Phone-number",
+          "ar": "رقم الهاتف"
+        },
+        "message": {
+          "en": "Message",
+          "ar": "الرسالة"
+        }
+      },
+      "submit_button": {
+        "en": "Send message",
+        "ar": "إرسال الرسالة"
+      },
+      "validation_messages": {
+        "required_fields": {
+          "en": "Please fill in all the required fields.",
+          "ar": "يرجى ملء جميع الحقول المطلوبة."
+        },
+        "success": {
+          "en": "Thank you for reaching out to us. We will get back to you.",
+          "ar": "شكراً لتواصلك معنا. سنعود إليك قريباً."
+        },
+        "error": {
+          "en": "There was an issue with the request. Please try again later.",
+          "ar": "حدثت مشكلة في الطلب. يرجى المحاولة مرة أخرى لاحقاً."
+        }
+      }
+    },
+    "footer": {
+      "address_section": {
+        "title": {
+          "en": "Address",
+          "ar": "العنوان"
+        },
+        "content": {
+          "en": "Akhrabiyah,<br>Al-Khobar 31952",
+          "ar": "العقربية،<br>الخبر ٣١٩٥٢"
+        }
+      },
+      "connect_section": {
+        "title": {
+          "en": "Connect",
+          "ar": "تواصل معنا"
+        },
+        "links": {
+          "instagram": {
+            "en": "Instagram",
+            "ar": "إنستغرام"
+          },
+          "facebook": {
+            "en": "Facebook",
+            "ar": "فيسبوك"
+          },
+          "twitter": {
+            "en": "Twitter",
+            "ar": "تويتر"
+          }
+        }
+      },
+      "explore_section": {
+        "title": {
+          "en": "Explore",
+          "ar": "استكشف"
+        },
+        "links": {
+          "home": {
+            "en": "Home",
+            "ar": "الرئيسية"
+          },
+          "about_us": {
+            "en": "About Us",
+            "ar": "من نحن"
+          },
+          "software_solutions": {
+            "en": "Software Solutions",
+            "ar": "الحلول البرمجية"
+          },
+          "industrial_services": {
+            "en": "Industrial Services",
+            "ar": "الخدمات الصناعية"
+          },
+          "industrial_products": {
+            "en": "Industrial Products",
+            "ar": "المنتجات الصناعية"
+          },
+          "contact_us": {
+            "en": "Contact Us",
+            "ar": "تواصل معنا"
+          }
+        }
+      },
+      "contact_info": {
+        "title": {
+          "en": "Get in Touch",
+          "ar": "ابق على تواصل"
+        }
+      }
+    },
+    "navigation": {
+      "home": {
+        "en": "Home",
+        "ar": "الرئيسية"
+      },
+      "about_us": {
+        "en": "About Us",
+        "ar": "من نحن"
+      },
+      "software_solutions": {
+        "en": "Software Solutions",
+        "ar": "الحلول البرمجية"
+      },
+      "industrial_services": {
+        "en": "Industrial Services",
+        "ar": "الخدمات الصناعية"
+      },
+      "industrial_products": {
+        "en": "Industrial Products",
+        "ar": "المنتجات الصناعية"
+      },
+      "contact_us": {
+        "en": "Contact Us",
+        "ar": "تواصل معنا"
+      }
+    }
+  }
+};
+
+// Language switching functionality
+let currentLanguage = 'en';
+
+// Function to switch language
+function switchLanguage(lang) {
+  currentLanguage = lang;
+  
+  // Update active language button
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  const activeBtn = document.querySelector(`[data-lang="${lang}"]`);
+  if (activeBtn) {
+    activeBtn.classList.add('active');
+  }
+  
+  // Apply RTL/LTR direction
+  const html = document.documentElement;
+  const body = document.body;
+  
+  if (lang === 'ar') {
+    html.setAttribute('dir', 'rtl');
+    html.setAttribute('lang', 'ar');
+    body.classList.add('rtl');
+  } else {
+    html.setAttribute('dir', 'ltr');
+    html.setAttribute('lang', 'en');
+    body.classList.remove('rtl');
+  }
+  
+  // Translate content
+  translateContent(lang);
+  
+  // Apply layout adjustments
+  applyLayoutAdjustments(lang);
+  
+  // Store language preference
+  if (typeof(Storage) !== "undefined") {
+    localStorage.setItem('preferredLanguage', lang);
+  }
+}
+
+// Function to convert Latin numerals to Arabic numerals
+function convertToArabicNumerals(text) {
+  const arabicNumerals = ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
+  return text.replace(/[0-9]/g, function(match) {
+    return arabicNumerals[parseInt(match)];
+  });
+}
+
+// Function to convert Arabic numerals back to Latin numerals
+function convertToLatinNumerals(text) {
+  const arabicToLatin = {
+    '٠': '0', '١': '1', '٢': '2', '٣': '3', '٤': '4',
+    '٥': '5', '٦': '6', '٧': '7', '٨': '8', '٩': '9'
+  };
+  return text.replace(/[٠-٩]/g, function(match) {
+    return arabicToLatin[match];
+  });
+}
+
+// Function to translate all content
+function translateContent(lang) {
+  // Update page title
+  document.title = translations.contact_page.title[lang];
+  
+  // Page banner content
+  const pageHeading = document.querySelector('.page-banner-section h1');
+  if (pageHeading) {
+    pageHeading.textContent = translations.contact_page.page_banner.heading[lang];
+  }
+  
+  const pageSubheading = document.querySelector('.page-banner-section h3');
+  if (pageSubheading) {
+    pageSubheading.textContent = translations.contact_page.page_banner.subheading[lang];
+  }
+  
+  const pageDescription = document.querySelector('.page-banner-section p');
+  if (pageDescription) {
+    pageDescription.textContent = translations.contact_page.page_banner.description[lang];
+  }
+  
+  // Intro text
+  const introText = document.querySelector('.title-box p');
+  if (introText) {
+    introText.textContent = translations.contact_page.intro_text[lang];
+  }
+  
+  // Contact cards
+  const contactCards = document.querySelectorAll('.contact-info-post');
+  if (contactCards.length >= 3) {
+    // Sales Specialist
+    const salesTitle = contactCards[0].querySelector('h4');
+    const salesName = contactCards[0].querySelector('.info-content p');
+    if (salesTitle) salesTitle.textContent = translations.contact_page.contact_cards.sales_specialist.title[lang];
+    if (salesName) salesName.textContent = translations.contact_page.contact_cards.sales_specialist.name[lang];
+    
+    // Technical Manager
+    const techTitle = contactCards[1].querySelector('h4');
+    const techName = contactCards[1].querySelector('.info-content p');
+    if (techTitle) techTitle.textContent = translations.contact_page.contact_cards.technical_manager.title[lang];
+    if (techName) techName.textContent = translations.contact_page.contact_cards.technical_manager.name[lang];
+    
+    // Address
+    const addressTitle = contactCards[2].querySelector('h4');
+    const addressText = contactCards[2].querySelector('.info-content p');
+    if (addressTitle) addressTitle.textContent = translations.contact_page.contact_cards.address.title[lang];
+    if (addressText) addressText.textContent = translations.contact_page.contact_cards.address.text[lang];
+  }
+  
+  // Contact form
+  const formTitle = document.querySelector('.contact-form-box h4');
+  if (formTitle) {
+    formTitle.textContent = translations.contact_page.contact_form.title[lang];
+  }
+  
+  // Form fields
+  const nameInput = document.getElementById('name');
+  if (nameInput) nameInput.placeholder = translations.contact_page.contact_form.fields.name[lang];
+  
+  const emailInput = document.getElementById('mail');
+  if (emailInput) emailInput.placeholder = translations.contact_page.contact_form.fields.email[lang];
+  
+  const phoneInput = document.getElementById('phone');
+  if (phoneInput) phoneInput.placeholder = translations.contact_page.contact_form.fields.phone[lang];
+  
+  const messageInput = document.getElementById('comment');
+  if (messageInput) messageInput.placeholder = translations.contact_page.contact_form.fields.message[lang];
+  
+  // Submit button
+  const submitButton = document.getElementById('submit_contact');
+  if (submitButton) {
+    submitButton.textContent = translations.contact_page.contact_form.submit_button[lang];
+  }
+  
+  // Navigation menu
+  const navItems = document.querySelectorAll('.navigation-menu-list li a span em');
+  const navKeys = ['home', 'about_us', 'software_solutions', 'industrial_services', 'industrial_products', 'contact_us'];
+  navItems.forEach((item, index) => {
+    if (translations.contact_page.navigation[navKeys[index]]) {
+      item.textContent = translations.contact_page.navigation[navKeys[index]][lang];
+    }
+  });
+  
+  // Footer content
+  const footerTitles = document.querySelectorAll('.footer-widget-line h5');
+  if (footerTitles.length >= 4) {
+    // Skip first one (logo), start from second
+    if (footerTitles[1]) footerTitles[1].textContent = translations.contact_page.footer.address_section.title[lang];
+    if (footerTitles[2]) footerTitles[2].textContent = translations.contact_page.footer.connect_section.title[lang];
+    if (footerTitles[3]) footerTitles[3].textContent = translations.contact_page.footer.explore_section.title[lang];
+    if (footerTitles[4]) footerTitles[4].textContent = translations.contact_page.footer.contact_info.title[lang];
+  }
+  
+  // Address content in footer
+  const addressContent = document.querySelector('.footer-widget-line .custom-list li[style*="color: white"]');
+  if (addressContent) {
+    addressContent.innerHTML = translations.contact_page.footer.address_section.content[lang];
+  }
+  
+  // Translate phone numbers to Arabic numerals if Arabic is selected
+  if (lang === 'ar') {
+    // Phone numbers in contact cards
+    const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+    phoneLinks.forEach(link => {
+      const originalHref = link.getAttribute('href');
+      const displayText = link.textContent;
+      // Convert display text to Arabic numerals but keep href in Latin
+      link.textContent = convertToArabicNumerals(displayText);
+    });
+    
+    // Phone numbers in info box
+    const infoBoxLinks = document.querySelectorAll('.info-box a[href^="tel:"]');
+    infoBoxLinks.forEach(link => {
+      link.textContent = convertToArabicNumerals(link.textContent);
+    });
+  } else {
+    // Convert back to Latin numerals for English
+    const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+    phoneLinks.forEach(link => {
+      link.textContent = convertToLatinNumerals(link.textContent);
+    });
+    
+    const infoBoxLinks = document.querySelectorAll('.info-box a[href^="tel:"]');
+    infoBoxLinks.forEach(link => {
+      link.textContent = convertToLatinNumerals(link.textContent);
+    });
+  }
+
+  // Footer navigation links
+  const footerLinks = document.querySelectorAll('.footer-widget-line .custom-list a');
+  footerLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    
+    // Handle phone links with numeral conversion
+    if (href && href.startsWith('tel:')) {
+      const displayText = link.textContent;
+      if (lang === 'ar') {
+        link.textContent = convertToArabicNumerals(displayText);
+      } else {
+        link.textContent = convertToLatinNumerals(displayText);
+      }
+      return;
+    }
+    
+    // Skip email links
+    if (href && href.startsWith('mailto:')) {
+      return;
+    }
+    
+    const linkText = link.textContent.trim().toLowerCase();
+    
+    // Social media links
+    if (linkText.includes('instagram') || href?.includes('instagram')) {
+      link.textContent = translations.contact_page.footer.connect_section.links.instagram[lang];
+    } else if (linkText.includes('facebook') || href?.includes('facebook')) {
+      link.textContent = translations.contact_page.footer.connect_section.links.facebook[lang];
+    } else if (linkText.includes('twitter') || href?.includes('twitter') || href?.includes('x.com')) {
+      link.textContent = translations.contact_page.footer.connect_section.links.twitter[lang];
+    }
+    
+    // Navigation links
+    else if (href === 'index.html') {
+      link.textContent = translations.contact_page.footer.explore_section.links.home[lang];
+    } else if (href === 'about.html') {
+      link.textContent = translations.contact_page.footer.explore_section.links.about_us[lang];
+    } else if (href === 'software.html') {
+      link.textContent = translations.contact_page.footer.explore_section.links.software_solutions[lang];
+    } else if (href === 'portfolio.html') {
+      link.textContent = translations.contact_page.footer.explore_section.links.industrial_services[lang];
+    } else if (href === 'blog.html') {
+      link.textContent = translations.contact_page.footer.explore_section.links.industrial_products[lang];
+    } else if (href === 'contact.html') {
+      link.textContent = translations.contact_page.footer.explore_section.links.contact_us[lang];
+    }
+  });
+}
+
+// Function to apply layout adjustments for RTL
+function applyLayoutAdjustments(lang) {
+  const isRTL = lang === 'ar';
+  
+  // Create or update RTL styles
+  let rtlStyles = document.getElementById('rtl-styles');
+  if (!rtlStyles) {
+    rtlStyles = document.createElement('style');
+    rtlStyles.id = 'rtl-styles';
+    document.head.appendChild(rtlStyles);
+  }
+  
+  if (isRTL) {
+    rtlStyles.textContent = `
+      /* RTL Layout Adjustments */
+      .rtl {
+        direction: rtl;
+        font-family: 'Noto Sans Arabic', 'Arial', 'Tahoma', sans-serif !important;
+      }
+      
+      /* Keep centered elements centered */
+      .rtl .page-banner-section,
+      .rtl .title-box,
+      .rtl .contact-form-box,
+      .rtl .contact-info-box {
+        text-align: center;
+      }
+      
+      /* Contact cards - keep centered */
+      .rtl .contact-info-post,
+      .rtl .info-content {
+        text-align: center;
+      }
+      
+      /* Navigation adjustments */
+      .rtl .navigation-menu-list {
+        direction: rtl;
+      }
+      
+      /* Footer adjustments */
+      .rtl .footer-widget-line {
+        text-align: right;
+      }
+      
+      .rtl .footer-widget-line h5 {
+        text-align: right;
+      }
+      
+      .rtl .footer-widget-line .custom-list {
+        text-align: right;
+      }
+      
+      /* Language switch positioning for RTL */
+      .rtl .language-switch {
+        right: auto;
+        left: 20px;
+      }
+      
+      /* Form adjustments */
+      .rtl .input-line label {
+        right: 15px;
+        left: auto;
+      }
+      
+      .rtl .input-line input,
+      .rtl .input-line textarea {
+        text-align: right;
+        padding-right: 40px;
+        padding-left: 15px;
+      }
+      
+      /* Contact details alignment */
+      .rtl .contact-details {
+        direction: rtl;
+      }
+      
+      .rtl .contact-details .detail-item {
+        justify-content: flex-end;
+        text-align: right;
+      }
+      
+      .rtl .contact-details i {
+        margin-right: 0;
+        margin-left: 8px;
+        order: 2;
+      }
+      
+      /* Info box icons */
+      .rtl .info-box i {
+        margin-right: 0;
+        margin-left: 8px;
+      }
+      
+      /* Keep specific elements LTR (emails, website, copyright) but allow phone number translation */
+      .rtl .info-box a[href*="ex-ion"],
+      .rtl .info-box a[href*="mailto"],
+      .rtl .custom-list a[href*="mailto"],
+      .rtl .custom-list a[href*="ex-ion"],
+      .rtl .copyright-line,
+      .rtl .logo,
+      .rtl .image-widget {
+        direction: ltr;
+        text-align: center;
+      }
+      
+      /* Phone numbers - allow Arabic numerals but keep LTR for layout */
+      .rtl .contact-details a[href*="tel"],
+      .rtl .custom-list a[href*="tel"],
+      .rtl .info-box a[href*="tel"] {
+        direction: ltr;
+        text-align: center;
+        unicode-bidi: plaintext;
+      }
+      
+      /* Arabic typography improvements */
+      .rtl h1, .rtl h2, .rtl h3, .rtl h4, .rtl h5, .rtl h6 {
+        font-weight: 600;
+      }
+      
+      .rtl p, .rtl li, .rtl span {
+        line-height: 1.8;
+      }
+    `;
+  } else {
+    rtlStyles.textContent = '';
+  }
+}
+
+// Form submission with translated messages
+function setupFormSubmission() {
+  const contactForm = document.getElementById("contact-form");
+  if (contactForm) {
+    contactForm.addEventListener("submit", async function (event) {
+      event.preventDefault();
+      
+      const nameInput = document.getElementById("name");
+      const phoneInput = document.getElementById("phone");
+      const msgInput = document.getElementById("comment");
+      const emailInput = document.getElementById("mail");
+
+      const name = nameInput?.value || '';
+      const phoneNumber = phoneInput?.value || '';
+      const msg = msgInput?.value || '';
+      const email = emailInput?.value || '';
+
+      if (!name || !phoneNumber || !msg) {
+        alert(translations.contact_page.contact_form.validation_messages.required_fields[currentLanguage]);
+        return;
+      }
+
+      const requestBody = {
+        name: name,
+        email: email,
+        phone: phoneNumber,
+        msg: msg,
+        company: "EXION",
+      };
+
+      try {
+        const res = await fetch("https://mailsender-1-v2m2.onrender.com/sendEmail", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(requestBody),
+        });
+
+        if (!res.ok) {
+          throw new Error(`HTTP error! status: ${res.status}`);
+        }
+
+        const data = await res.json();
+
+        if (data.msg === "Mail sent successfully") {
+          alert(translations.contact_page.contact_form.validation_messages.success[currentLanguage]);
+
+          // Clear input fields after successful submission
+          if (nameInput) nameInput.value = "";
+          if (phoneInput) phoneInput.value = "";
+          if (msgInput) msgInput.value = "";
+          if (emailInput) emailInput.value = "";
+        } else {
+          alert(translations.contact_page.contact_form.validation_messages.error[currentLanguage]);
+        }
+      } catch (error) {
+        console.error("Failed to send email:", error);
+        alert(translations.contact_page.contact_form.validation_messages.error[currentLanguage]);
+      }
+    });
+  }
+}
+
+// Initialize everything when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Check for saved language preference
+  let savedLanguage = 'en';
+  if (typeof(Storage) !== "undefined") {
+    savedLanguage = localStorage.getItem('preferredLanguage') || 'en';
+  }
+  
+  // Set up language button event listeners
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const lang = this.getAttribute('data-lang');
+      switchLanguage(lang);
+    });
+  });
+  
+  // Setup form submission
+  setupFormSubmission();
+  
+  // Initialize with saved language
+  switchLanguage(savedLanguage);
+});
+
+// Add CSS to head for Arabic font support if not already present
+document.addEventListener('DOMContentLoaded', function() {
+  const existingArabicFont = document.querySelector('link[href*="Noto+Sans+Arabic"]');
+  if (!existingArabicFont) {
+    const arabicFont = document.createElement('link');
+    arabicFont.href = 'https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap';
+    arabicFont.rel = 'stylesheet';
+    document.head.appendChild(arabicFont);
+  }
+});</script>
 
 </body>
 

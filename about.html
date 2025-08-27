@@ -119,6 +119,46 @@
 							<a href="contact.html"><span><em>Contact Us</em></span></a>
 						</li>
 					</ul>
+						<div class="language-switch">
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="ar">AR</button>
+</div>
+				</nav>
+<style>.language-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    background: #5a5a5a;
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.lang-btn {
+    background: transparent;
+    border: none;
+    color: #ccc;
+    padding: 8px 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.lang-btn.active {
+    background: #d92828;
+    color: white;
+}
+
+.lang-btn:hover {
+    background: #717171;
+    color: white;
+}
+
+/* RTL adjustments for Arabic */
+</style>
 				</nav>
 
 			</header>
@@ -157,14 +197,19 @@
 										<div class="row">
 											<div class="col-md-12 col-sm-4">
 												<img src="images/aboutus-mainPage.jpg" alt="about1">
-												
+
 											</div>
 											<div class="col-12 col-md-6">
-  <div class="d-flex flex-column flex-md-row align-items-center justify-content-md-evenly gap-3 gap-md-4">
-    <img class="img-fluid snd-size" src="images/smart-factory-communication.jpg" alt="Smart factory">
-    <img class="img-fluid snd-size" src="images/industrial-electrical-automation.jpg" alt="Industrial automation">
-  </div>
-</div>
+												<div
+													class="d-flex flex-column flex-md-row align-items-center justify-content-md-evenly gap-3 gap-md-4">
+													<img class="img-fluid snd-size"
+														src="images/smart-factory-communication.jpg"
+														alt="Smart factory">
+													<img class="img-fluid snd-size"
+														src="images/industrial-electrical-automation.jpg"
+														alt="Industrial automation">
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -172,40 +217,49 @@
 									<div class="about-content">
 										<h3
 											style="font-size: 25px ; font-family: Montserrat, sans-serif;   font-weight: 700;   line-height: 40px; ">
-											Ex-ion: Driving Business Growth Through Smart Software 
-Solutions</h3>
-										<p style="font-size: 15px;">At Ex-ion, we go beyond being just another service provider — we are 
-your technology growth partner. With a strong presence in Saudi 
-Arabia, we empower businesses to evolve, adapt, and scale using 
-cutting-edge software solutions tailored to their unique needs.</p>
-										<p style="font-size: 15px;">With years of experience across industries, we specialize in crafting 
-custom software, digital tools, and IT solutions that drive real-world 
-results. Whether you're a startup looking to build your first product 
-or an enterprise streamlining complex operations — we bring the 
-strategy, execution, and support you need to succeed. </p>
-										    <ul class="feature-list" style="padding-left: 0; margin-left: 0; list-style: none;">
- <li style="font-size: 15px; margin-bottom: 20px;">
-   <div style="font-weight: bold; margin-bottom: 5px;" class="heading">Innovation</div>
-   <div class="description" style="margin-left: 40px;">Bringing the latest advancements to your doorstep</div>
- </li>
- <li style="font-size: 15px; margin-bottom: 20px;" >
-   <div style="font-weight: bold; margin-bottom: 5px;" class="heading">Reliability</div>
-   <div class="description" style="margin-left: 40px;">Partnering with you for the long haul</div>
- </li>
- <li style="font-size: 15px; margin-bottom: 20px;" >
-   <div style="font-weight: bold; margin-bottom: 5px;" class="heading">Excellence</div>
-   <div class="description" style="margin-left: 40px;">Delivering world-class solutions every time</div>
- </li>
-</ul>
+											Ex-ion: Driving Business Growth Through Smart Software
+											Solutions</h3>
+										<p style="font-size: 15px;">At Ex-ion, we go beyond being just another service
+											provider — we are
+											your technology growth partner. With a strong presence in Saudi
+											Arabia, we empower businesses to evolve, adapt, and scale using
+											cutting-edge software solutions tailored to their unique needs.</p>
+										<p style="font-size: 15px;">With years of experience across industries, we
+											specialize in crafting
+											custom software, digital tools, and IT solutions that drive real-world
+											results. Whether you're a startup looking to build your first product
+											or an enterprise streamlining complex operations — we bring the
+											strategy, execution, and support you need to succeed. </p>
+										<ul class="feature-list"
+											style="padding-left: 0; margin-left: 0; list-style: none;">
+											<li style="font-size: 15px; margin-bottom: 20px;">
+												<div style="font-weight: bold; margin-bottom: 5px;" class="heading">
+													Innovation</div>
+												<div class="description" style="margin-left: 40px;">Bringing the latest
+													advancements to your doorstep</div>
+											</li>
+											<li style="font-size: 15px; margin-bottom: 20px;">
+												<div style="font-weight: bold; margin-bottom: 5px;" class="heading">
+													Reliability</div>
+												<div class="description" style="margin-left: 40px;">Partnering with you
+													for the long haul</div>
+											</li>
+											<li style="font-size: 15px; margin-bottom: 20px;">
+												<div style="font-weight: bold; margin-bottom: 5px;" class="heading">
+													Excellence</div>
+												<div class="description" style="margin-left: 40px;">Delivering
+													world-class solutions every time</div>
+											</li>
+										</ul>
 
-<style>
+										<style>
+											@media screen and (max-width: 320px) {
+												.heading {
 
- @media screen and (max-width: 320px){
-	.heading{
-
-	font-size:14px}
- }
-</style>
+													font-size: 14px
+												}
+											}
+										</style>
 									</div>
 								</div>
 							</div>
@@ -226,24 +280,26 @@ strategy, execution, and support you need to succeed. </p>
 									<div class="services-post3" style="height: 280px;">
 										<i class="fas fa-lightbulb"></i>
 										<h4>Innovation</h4>
-										<p style="font-size: 15px;"> Embracing the latest tech<br> to keep you ahead of the 
-curve. </p>
+										<p style="font-size: 15px;"> Embracing the latest tech<br> to keep you ahead of
+											the
+											curve. </p>
 									</div>
 								</div>
 								<div class="col-lg-4">
 									<div class="services-post3" style="height: 280px;">
 										<i class="fas fa-shield-alt"></i>
 										<h4>Reliability</h4>
-										<p style="font-size: 15px;"> Building long-term partnerships built on trust and 
-consistency.</p>
+										<p style="font-size: 15px;"> Building long-term partnerships built on trust and
+											consistency.</p>
 									</div>
 								</div>
 								<div class="col-lg-4">
 									<div class="services-post3" style="height: 280px;">
 										<i class="fas fa-medal"></i>
 										<h4>Excellence</h4>
-										<p style="font-size: 15px;">  Delivering robust, scalable, and impactful software — 
-every time.
+										<p style="font-size: 15px;"> Delivering robust, scalable, and impactful software
+											—
+											every time.
 										</p>
 									</div>
 								</div>
@@ -252,58 +308,6 @@ every time.
 					</div>
 
 				</section>
-				<!-- End services-section3 -->
-
-				<!-- features-carousel-section
-				================================================== -->
-				<!-- <section class="features-carousel-section">
-
-				<div class="container">
-					<div class="features-carousel-box owl-wrapper">
-						<div class="owl-carousel owl-theme" data-num="1">
-				
-							<div class="item">
-								<div class="feature-post">
-									<div class="image-holder">
-										<img src="upload/home3/carousel-img1.jpg" alt="carousel1">
-									</div>
-									<div class="feature-post-content">
-										<span>our specialty</span>
-										<h3>Transformational Designs</h3>
-									</div>
-								</div>
-							</div>
-				
-							<div class="item">
-								<div class="feature-post">
-									<div class="image-holder">
-										<img src="upload/home3/services.jpg" alt="carousel1">
-									</div>
-									<div class="feature-post-content">
-										<span>planings</span>
-										<h3>Interception Design</h3>
-									</div>
-								</div>
-							</div>
-				
-							<div class="item">
-								<div class="feature-post">
-									<div class="image-holder">
-										<img src="upload/home3/home3_slide-01.jpg" alt="carousel1">
-									</div>
-									<div class="feature-post-content">
-										<span>lot of features</span>
-										<h3>Functional Finalisation</h3>
-									</div>
-								</div>
-							</div>
-							
-						</div>
-					</div>
-				</div>
-
-			</section> -->
-				<!-- End features-carousel-section -->
 
 				<div class="divider-line"></div>
 
@@ -317,20 +321,27 @@ every time.
 								<div class="col-lg-5">
 									<div class="feature-content">
 										<h3>What Makes Us Different?</h3>
-										<p style="font-size: 15px;"><span style="font-weight: bold;">Custom Software Development </span>tailored for your business workflows 
+										<p style="font-size: 15px;"><span style="font-weight: bold;">Custom Software
+												Development </span>tailored for your business workflows
 
-											</p>
-										<p style="font-size: 15px;"><span style="font-weight: bold">Cloud-Ready & Scalable Solutions</span> using modern technologies 
-</p>
-										<p style="font-size: 15px;"><span style="font-weight: bold">Client-Centric Approach</span>  that aligns with your goals 
-</p>
-	<p style="font-size: 15px;"> <span style="font-weight: bold">Agile Development Process</span> with continuous support and iterations 
- 
-</p>	<p style="font-size: 15px;"><span style="font-weight: bold">Cross-Industry Experience</span>  with proven results in diverse sectors 
+										</p>
+										<p style="font-size: 15px;"><span style="font-weight: bold">Cloud-Ready &
+												Scalable Solutions</span> using modern technologies
+										</p>
+										<p style="font-size: 15px;"><span style="font-weight: bold">Client-Centric
+												Approach</span> that aligns with your goals
+										</p>
+										<p style="font-size: 15px;"> <span style="font-weight: bold">Agile Development
+												Process</span> with continuous support and iterations
 
-</p>
-	<p style="font-size: 15px;"><span style="font-weight: bold">Commitment to Quality</span> in every line of code and service 
-</p>
+										</p>
+										<p style="font-size: 15px;"><span style="font-weight: bold">Cross-Industry
+												Experience</span> with proven results in diverse sectors
+
+										</p>
+										<p style="font-size: 15px;"><span style="font-weight: bold">Commitment to
+												Quality</span> in every line of code and service
+										</p>
 									</div>
 								</div>
 								<div class="col-lg-7">
@@ -348,109 +359,7 @@ every time.
 
 				<div class="divider-line"></div>
 
-				<!-- features-section2
-				================================================== -->
-				<!-- <section class="features-section2">
 
-				<div class="container">
-					<div class="features-box2">
-						<div class="row">
-							<div class="col-lg-6">
-								<div class="images-box">
-									<div class="row">
-										<div class="col-md-6">
-											<div class="image-holder">
-												<img src="upload/home3/feature-img-1.jpg" alt="feature1">
-												<span>Building &amp; Construction</span>
-											</div>
-										</div>
-										<div class="col-md-6">
-											<div class="image-holder">
-												<img src="upload/home3/feature-img-2.png" alt="feature2">
-												<span>Modern Architecture</span>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6">
-								<div class="feature-content">
-									<span>amazing features</span>
-									<h3>Royarch Theme</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed doreas m od tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labo</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</section> -->
-				<!-- End features-section -->
-
-
-				<!-- services-section6 
-				================================================== -->
-				<!-- <section class="services-section6">
-
-				<div class="container">
-					<div class="services-box6">
-						<div class="row">
-							<div class="col-lg-6">
-								<div class="title-box">
-									<span>Firm of The Year</span>
-									<h2>Award-Wining Company</h2>
-								</div>
-								<div class="services-post6">
-									<div class="icon">
-										<span class="material-icons-outlined">
-										app_registration
-										</span>
-									</div>
-									<div class="serv-content">
-										<h4>Creative Architecture designs</h4>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt</p>
-									</div>
-								</div>
-
-								<div class="services-post6">
-									<div class="icon">
-										<span class="material-icons-outlined">
-										crop_rotate
-										</span>
-									</div>
-									<div class="serv-content">
-										<h4>The joy of Best Living</h4>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt</p>
-									</div>
-								</div>
-
-								<div class="services-post6">
-									<div class="icon">
-										<span class="material-icons-outlined">
-										straighten
-										</span>
-									</div>
-									<div class="serv-content">
-										<h4>Professional Planning</h4>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6">
-								<div class="image-holder">
-									<img src="upload/home3/services.jpg" alt="services">
-									<a class="serv-link" href="services.html">
-										Services
-										<i class="fas fa-long-arrow-alt-right"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</section> -->
-				<!-- End services-section6 -->
 
 				<!-- footer 
 				================================================== -->
@@ -459,20 +368,7 @@ every time.
 						<i class="far fa-arrow-alt-circle-up"></i>
 					</a>
 
-					<!-- <div class="instagram-line">
-						<div class="container">
-							<ul class="insta-list">
-								<li><a href="#"><img src="upload/instagram/1.jpg" alt=""></a></li>
-								<li><a href="#"><img src="upload/instagram/2.jpg" alt=""></a></li>
-								<li><a href="#"><img src="upload/instagram/3.jpg" alt=""></a></li>
-								<li><a href="#"><img src="upload/instagram/4.jpg" alt=""></a></li>
-								<li><a href="#"><img src="upload/instagram/5.jpg" alt=""></a></li>
-								<li><a href="#"><img src="upload/instagram/6.jpg" alt=""></a></li>
-								<li><a href="#"><img src="upload/instagram/7.jpg" alt=""></a></li>
-								<li><a href="#"><img src="upload/instagram/8.png" alt=""></a></li>
-							</ul>
-						</div>
-					</div> -->
+
 
 					<div class="widget-part-area">
 						<div class="footer-widget-line">
@@ -507,8 +403,8 @@ every time.
 							<h5 style="margin-top: 90px;">Explore</h5>
 							<ul class="custom-list">
 								<li><a href="index.html">Home</a></li>
-																<li><a href="about.html">About Us</a></li>
-																
+								<li><a href="about.html">About Us</a></li>
+
 								<li><a href="software.html">Software Solutions</a></li>
 
 								<li><a href="portfolio.html"> Industrial Services</a></li>
@@ -523,7 +419,8 @@ every time.
 							<ul class="custom-list">
 								<li><a href="mailto:sales@ex-ion.com"> sales@ex-ion.com
 									</a></li>
-<li><a href="tel:+966552577976">+966 55 257 7976</a></li>							</ul>
+								<li><a href="tel:+966552577976">+966 55 257 7976</a></li>
+							</ul>
 						</div>
 					</div>
 
@@ -558,6 +455,491 @@ every time.
 		src="http://maps.google.com/maps/api/js?key=AIzaSyCiqrIen8rWQrvJsu-7f4rOta0fmI5r2SI&amp;sensor=false&amp;language=en"></script>
 	<script src="js/gmap3.min.js"></script>
 	<script src="js/script.js"></script>
+	<script>// Language translations object (corrected JSON)
+const translations = {
+  "about_us": {
+    "title": { "en": "About Us", "ar": "من نحن" },
+    "who_are_we": {
+      "heading": { "en": "Who Are We", "ar": "من نحن" },
+      "subheading": { "en": "About Ex-ion: Turning Ideas Into Impact", "ar": "عن إكسيون: تحويل الأفكار إلى تأثير" },
+      "tagline": { "en": "Ex-ion: Driving Business Growth Through Smart Software Solutions", "ar": "إكسيون: تعزيز نمو الأعمال من خلال حلول برمجية ذكية" },
+      "description": {
+        "en": "At Ex-ion, we go beyond being just another service provider — we are your technology growth partner. With a strong presence in Saudi Arabia, we empower businesses to evolve, adapt, and scale using cutting-edge software solutions tailored to their unique needs. With years of experience across industries, we specialize in crafting custom software, digital tools, and IT solutions that drive real-world results. Whether you're a startup looking to build your first product or an enterprise streamlining complex operations — we bring the strategy, execution, and support you need to succeed.",
+        "ar": "في إكسيون، نحن لسنا مجرد مزود خدمة آخر — بل نحن شريكك في النمو التكنولوجي. مع وجود قوي في المملكة العربية السعودية، نمكّن الشركات من التطور والتكيف والتوسع باستخدام حلول برمجية متقدمة مصممة خصيصًا لتلبية احتياجاتها الفريدة. بفضل سنوات من الخبرة عبر مختلف الصناعات، نحن متخصصون في تطوير البرمجيات المخصصة، والأدوات الرقمية، وحلول تقنية المعلومات التي تحقق نتائج ملموسة. سواء كنت شركة ناشئة تسعى لبناء أول منتج لك، أو مؤسسة كبيرة تسعى لتبسيط العمليات المعقدة — نحن نقدم لك الاستراتيجية والتنفيذ والدعم الذي تحتاجه للنجاح."
+      }
+    },
+    "core_values": {
+      "heading": { "en": "Our Core Values", "ar": "قيمنا الأساسية" },
+      "values": [
+        {
+          "title": { "en": "Innovation", "ar": "الابتكار" },
+          "short": { "en": "Bringing the latest advancements to your doorstep.", "ar": "نقدم أحدث التطورات إلى متناول يدك." },
+          "extended": { "en": "Embracing the latest tech to keep you ahead of the curve.", "ar": "نحتضن أحدث التقنيات لنُبقيك دائمًا في الصدارة." }
+        },
+        {
+          "title": { "en": "Reliability", "ar": "الموثوقية" },
+          "short": { "en": "Partnering with you for the long haul.", "ar": "نقف إلى جانبك كشريك طويل الأمد." },
+          "extended": { "en": "Building long-term partnerships built on trust and consistency.", "ar": "نبني شراكات طويلة الأمد قائمة على الثقة والاستمرارية." }
+        },
+        {
+          "title": { "en": "Excellence", "ar": "التميز" },
+          "short": { "en": "Delivering world-class solutions every time.", "ar": "نقدم حلولًا عالمية المستوى في كل مرة." },
+          "extended": { "en": "Delivering robust, scalable, and impactful software — every time.", "ar": "نقدم برمجيات قوية وقابلة للتوسع وذات تأثير ملموس — في كل مرة." }
+        }
+      ]
+    },
+    "what_makes_us_different": {
+      "heading": { "en": "What Makes Us Different?", "ar": "ما الذي يجعلنا مختلفين؟" },
+      "points": [
+        {
+          "en": "Custom Software Development tailored for your business workflows",
+          "ar": "تطوير برمجيات مخصصة مصممة لتتناسب مع سير عملك"
+        },
+        {
+          "en": "Cloud-Ready & Scalable Solutions using modern technologies",
+          "ar": "حلول سحابية وقابلة للتوسع باستخدام أحدث التقنيات"
+        },
+        {
+          "en": "Client-Centric Approach that aligns with your goals",
+          "ar": "نهج يركز على العميل ويتماشى مع أهدافك"
+        },
+        {
+          "en": "Agile Development Process with continuous support and iterations",
+          "ar": "عملية تطوير رشيقة مع دعم مستمر وتكرارات متجددة"
+        },
+        {
+          "en": "Cross-Industry Experience with proven results in diverse sectors",
+          "ar": "خبرة متعددة القطاعات بنتائج مثبتة في مجالات متنوعة"
+        },
+        {
+          "en": "Commitment to Quality in every line of code and service",
+          "ar": "التزام بالجودة في كل سطر برمجي وكل خدمة نقدمها"
+        }
+      ]
+    }
+  },
+  "navbar": {
+    "home": { "en": "Home", "ar": "الرئيسية" },
+    "about_us": { "en": "About Us", "ar": "من نحن" },
+    "software_solutions": { "en": "Software Solutions", "ar": "الحلول البرمجية" },
+    "industrial_services": { "en": "Industrial Services", "ar": "الخدمات الصناعية" },
+    "industrial_products": { "en": "Industrial Products", "ar": "المنتجات الصناعية" },
+    "contact_us": { "en": "Contact Us", "ar": "تواصل معنا" }
+  },
+  "footer": {
+    "address_section": {
+      "title": { "en": "Address", "ar": "العنوان" },
+      "content": { "en": "Akhrabiyah, Al-Khobar 31952", "ar": "العقربية، الخبر ٣١٩٥٢" }
+    },
+    "connect_section": {
+      "title": { "en": "Connect", "ar": "تواصل معنا" },
+      "links": {
+        "instagram": { "en": "Instagram", "ar": "إنستغرام" },
+        "facebook": { "en": "Facebook", "ar": "فيسبوك" },
+        "twitter": { "en": "Twitter", "ar": "تويتر" }
+      }
+    },
+    "explore_section": {
+      "title": { "en": "Explore", "ar": "استكشف" },
+      "links": {
+        "home": { "en": "Home", "ar": "الرئيسية" },
+        "about_us": { "en": "About Us", "ar": "من نحن" },
+        "software_solutions": { "en": "Software Solutions", "ar": "الحلول البرمجية" },
+        "industrial_services": { "en": "Industrial Services", "ar": "الخدمات الصناعية" },
+        "industrial_products": { "en": "Industrial Products", "ar": "المنتجات الصناعية" },
+        "contact_us": { "en": "Contact Us", "ar": "تواصل معنا" }
+      }
+    },
+    "contact_info": {
+      "title": { "en": "Get in Touch", "ar": "ابق على تواصل" },
+      "email": "sales@ex-ion.com",
+      "phone": { "en": "+966 55 257 7976", "ar": "+٩٦٦ ٥٥ ٢٥٧ ٧٩٧٦" }
+    }
+  }
+};
+
+// Language switcher class
+class LanguageSwitcher {
+  constructor() {
+    this.currentLang = 'en';
+    this.init();
+  }
+
+  init() {
+    // Load saved language preference or default to English
+    this.currentLang = this.getSavedLanguage() || 'en';
+    
+    // Apply initial language
+    this.applyLanguage(this.currentLang);
+    
+    // Add event listeners to language buttons
+    this.attachEventListeners();
+    
+    // Update button states
+    this.updateButtonStates();
+  }
+
+  attachEventListeners() {
+    const langButtons = document.querySelectorAll('.lang-btn');
+    langButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        const selectedLang = e.target.getAttribute('data-lang');
+        this.switchLanguage(selectedLang);
+      });
+    });
+  }
+
+  switchLanguage(lang) {
+    if (lang === this.currentLang) return;
+    
+    this.currentLang = lang;
+    this.applyLanguage(lang);
+    this.updateButtonStates();
+    this.saveLanguage(lang);
+    
+    // Apply RTL/LTR direction
+    this.setDirection(lang);
+  }
+
+  applyLanguage(lang) {
+    // Page banner section
+    this.updateElement('.page-banner-section h1', translations.about_us.who_are_we.heading[lang]);
+    this.updateElement('.page-banner-section p', translations.about_us.who_are_we.subheading[lang]);
+    
+    // About section - main heading
+    this.updateElement('.about-content h3', translations.about_us.who_are_we.tagline[lang]);
+    
+    // About section - description paragraphs
+    const aboutParagraphs = document.querySelectorAll('.about-content p');
+    if (aboutParagraphs.length >= 2) {
+      const fullDescription = translations.about_us.who_are_we.description[lang];
+      // Split the description into two paragraphs at a natural break
+      const midPoint = Math.floor(fullDescription.length / 2);
+      const breakPoint = fullDescription.indexOf('. ', midPoint) + 1;
+      
+      if (breakPoint > 0) {
+        aboutParagraphs[0].textContent = fullDescription.substring(0, breakPoint).trim();
+        aboutParagraphs[1].textContent = fullDescription.substring(breakPoint).trim();
+      } else {
+        aboutParagraphs[0].textContent = fullDescription;
+      }
+    }
+    
+    // Core values in feature list
+    const featureListItems = document.querySelectorAll('.feature-list li');
+    if (featureListItems.length >= 3) {
+      translations.about_us.core_values.values.forEach((value, index) => {
+        if (featureListItems[index]) {
+          const heading = featureListItems[index].querySelector('.heading');
+          const description = featureListItems[index].querySelector('.description');
+          if (heading) heading.textContent = value.title[lang];
+          if (description) description.textContent = value.short[lang];
+        }
+      });
+    }
+    
+    // Services section (core values extended)
+    const servicesHeaders = document.querySelectorAll('.services-post3 h4');
+    const servicesDescriptions = document.querySelectorAll('.services-post3 p');
+    
+    if (servicesHeaders.length >= 3) {
+      translations.about_us.core_values.values.forEach((value, index) => {
+        if (servicesHeaders[index]) {
+          servicesHeaders[index].textContent = value.title[lang];
+        }
+        if (servicesDescriptions[index]) {
+          servicesDescriptions[index].textContent = value.extended[lang];
+        }
+      });
+    }
+    
+    // What makes us different section
+    this.updateElement('.feature-content h3', translations.about_us.what_makes_us_different.heading[lang]);
+    
+    const featureParagraphs = document.querySelectorAll('.feature-content p');
+    
+    // Update the feature points - there are 6 points starting from index 0
+    if (featureParagraphs.length >= 6) {
+      translations.about_us.what_makes_us_different.points.forEach((point, index) => {
+        if (featureParagraphs[index]) {
+          const paragraph = featureParagraphs[index];
+          const translatedText = point[lang];
+          
+          // Check if this paragraph has a bold span
+          const boldSpan = paragraph.querySelector('span[style*="font-weight: bold"]');
+          
+          if (boldSpan) {
+            // For paragraphs with bold text, split the translation appropriately
+            let boldPart = '';
+            let normalPart = translatedText;
+            
+            // Try to find a natural break point for bold text
+            if (lang === 'en') {
+              // For English, typically the first few words are bold
+              if (translatedText.includes(' tailored') || translatedText.includes(' Development')) {
+                const words = translatedText.split(' ');
+                boldPart = words.slice(0, 3).join(' '); // First 3 words
+                normalPart = words.slice(3).join(' ');
+              } else if (translatedText.includes(' Solutions') || translatedText.includes(' Approach')) {
+                const words = translatedText.split(' ');
+                boldPart = words.slice(0, 4).join(' '); // First 4 words
+                normalPart = words.slice(4).join(' ');
+              } else {
+                const words = translatedText.split(' ');
+                boldPart = words.slice(0, 3).join(' '); // Default: first 3 words
+                normalPart = words.slice(3).join(' ');
+              }
+            } else {
+              // For Arabic, typically the first part until a natural break
+              if (translatedText.includes('مخصصة')) {
+                boldPart = 'تطوير برمجيات مخصصة';
+                normalPart = translatedText.replace('تطوير برمجيات مخصصة', '').trim();
+              } else if (translatedText.includes('سحابية')) {
+                boldPart = 'حلول سحابية وقابلة للتوسع';
+                normalPart = translatedText.replace('حلول سحابية وقابلة للتوسع', '').trim();
+              } else if (translatedText.includes('يركز على العميل')) {
+                boldPart = 'نهج يركز على العميل';
+                normalPart = translatedText.replace('نهج يركز على العميل', '').trim();
+              } else if (translatedText.includes('تطوير رشيقة')) {
+                boldPart = 'عملية تطوير رشيقة';
+                normalPart = translatedText.replace('عملية تطوير رشيقة', '').trim();
+              } else if (translatedText.includes('متعددة القطاعات')) {
+                boldPart = 'خبرة متعددة القطاعات';
+                normalPart = translatedText.replace('خبرة متعددة القطاعات', '').trim();
+              } else if (translatedText.includes('التزام بالجودة')) {
+                boldPart = 'التزام بالجودة';
+                normalPart = translatedText.replace('التزام بالجودة', '').trim();
+              } else {
+                // Default: take first part
+                const words = translatedText.split(' ');
+                boldPart = words.slice(0, 3).join(' ');
+                normalPart = words.slice(3).join(' ');
+              }
+            }
+            
+            // Update the paragraph with bold and normal parts
+            paragraph.innerHTML = `<span style="font-weight: bold;">${boldPart}</span> ${normalPart}`;
+          } else {
+            // For paragraphs without bold formatting, just update the text
+            paragraph.textContent = translatedText;
+          }
+        }
+      });
+    }
+    
+    // Navigation menu
+    const navLinks = document.querySelectorAll('.navigation-menu-list a span em');
+    const navItems = ['home', 'about_us', 'software_solutions', 'industrial_services', 'industrial_products', 'contact_us'];
+    
+    navLinks.forEach((link, index) => {
+      if (navItems[index] && translations.navbar[navItems[index]]) {
+        link.textContent = translations.navbar[navItems[index]][lang];
+      }
+    });
+    
+    // Footer sections
+    this.updateFooter(lang);
+  }
+
+  updateFooter(lang) {
+    // Footer widget headers
+    const widgetHeaders = document.querySelectorAll('.footer-widget-line h5');
+    if (widgetHeaders.length >= 4) {
+      widgetHeaders[0].textContent = translations.footer.address_section.title[lang];
+      widgetHeaders[1].textContent = translations.footer.connect_section.title[lang];
+      widgetHeaders[2].textContent = translations.footer.explore_section.title[lang];
+      widgetHeaders[3].textContent = translations.footer.contact_info.title[lang];
+    }
+    
+    // Address content
+    const addressContent = document.querySelector('.footer-widget-line ul.custom-list li');
+    if (addressContent && !addressContent.querySelector('a')) {
+      addressContent.innerHTML = translations.footer.address_section.content[lang];
+    }
+    
+    // Connect section links
+    const connectLinks = document.querySelectorAll('.footer-widget-line ul.custom-list a');
+    const connectItems = ['instagram', 'facebook', 'twitter'];
+    
+    connectLinks.forEach((link, index) => {
+      if (connectItems[index] && translations.footer.connect_section.links[connectItems[index]]) {
+        if (link.textContent.toLowerCase().includes(connectItems[index]) || 
+            link.href.includes(connectItems[index])) {
+          link.textContent = translations.footer.connect_section.links[connectItems[index]][lang];
+        }
+      }
+    });
+    
+    // Explore section links
+    const exploreLinks = document.querySelectorAll('.footer-widget-line:nth-child(4) ul.custom-list a');
+    const exploreItems = ['home', 'about_us', 'software_solutions', 'industrial_services', 'industrial_products', 'contact_us'];
+    
+    exploreLinks.forEach((link, index) => {
+      if (exploreItems[index] && translations.footer.explore_section.links[exploreItems[index]]) {
+        link.textContent = translations.footer.explore_section.links[exploreItems[index]][lang];
+      }
+    });
+    
+    // Contact info - phone number
+    const contactLinks = document.querySelectorAll('.footer-widget-line:last-child ul.custom-list a');
+    contactLinks.forEach(link => {
+      if (link.href.includes('tel:')) {
+        link.textContent = translations.footer.contact_info.phone[lang];
+      }
+    });
+  }
+
+  updateElement(selector, text) {
+    const element = document.querySelector(selector);
+    if (element && text) {
+      element.textContent = text;
+    }
+  }
+
+  updateButtonStates() {
+    const buttons = document.querySelectorAll('.lang-btn');
+    buttons.forEach(button => {
+      button.classList.remove('active');
+      if (button.getAttribute('data-lang') === this.currentLang) {
+        button.classList.add('active');
+      }
+    });
+  }
+
+  setDirection(lang) {
+    const html = document.documentElement;
+    const body = document.body;
+    
+    if (lang === 'ar') {
+      html.setAttribute('dir', 'rtl');
+      html.setAttribute('lang', 'ar');
+      body.style.direction = 'rtl';
+      body.style.textAlign = 'right';
+    } else {
+      html.setAttribute('dir', 'ltr');
+      html.setAttribute('lang', 'en');
+      body.style.direction = 'ltr';
+      body.style.textAlign = 'left';
+    }
+  }
+
+  saveLanguage(lang) {
+    try {
+      // Since localStorage is not available, we'll use a cookie as fallback
+      document.cookie = `preferred_language=${lang}; max-age=31536000; path=/`;
+    } catch (e) {
+      console.log('Unable to save language preference');
+    }
+  }
+
+  getSavedLanguage() {
+    try {
+      // Try to get from cookie
+      const cookies = document.cookie.split(';');
+      for (let cookie of cookies) {
+        const [name, value] = cookie.trim().split('=');
+        if (name === 'preferred_language') {
+          return value;
+        }
+      }
+    } catch (e) {
+      console.log('Unable to retrieve saved language');
+    }
+    return null;
+  }
+}
+
+// Additional CSS for RTL support (to be added to your CSS file)
+const rtlStyles = `
+  /* Only apply RTL to text content areas, keep centered elements centered */
+  
+  /* RTL for paragraph text content */
+  [dir="rtl"] .about-content p {
+    text-align: right;
+    direction: rtl;
+  }
+  
+  [dir="rtl"] .feature-content p {
+    text-align: right;
+    direction: rtl;
+  }
+  
+  /* RTL for feature list items */
+  [dir="rtl"] .feature-list {
+    text-align: right;
+  }
+  
+  [dir="rtl"] .feature-list .description {
+    margin-left: 0;
+    margin-right: 40px;
+  }
+  
+  /* Fix for checkmark icons in RTL - move to right side */
+  [dir="rtl"] .about-section .about-box ul.feature-list li:before {
+    float: right !important;
+    margin-right: 0 !important;
+    margin-left: 16px !important;
+  }
+  
+  [dir="rtl"] .about-section .about-box ul.feature-list li {
+    text-align: right;
+    padding-right: 0;
+    padding-left: 40px;
+    direction: rtl;
+  }
+  
+  /* RTL for navigation menu */
+  [dir="rtl"] .navigation-menu-list {
+    direction: rtl;
+  }
+  
+  [dir="rtl"] .navigation-menu-list li {
+    text-align: right;
+  }
+  
+  /* RTL for footer content */
+  [dir="rtl"] .footer-widget-line ul.custom-list {
+    text-align: right;
+    direction: rtl;
+  }
+  
+  [dir="rtl"] .footer-widget-line h5 {
+    text-align: right;
+  }
+  
+  /* Language switch position adjustment */
+  [dir="rtl"] .language-switch {
+    left: 20px;
+    right: auto;
+  }
+  
+  /* Keep headings and titles centered if they were originally centered */
+  /* Only change regular text paragraphs to RTL alignment */
+`;
+
+// Inject RTL styles
+function injectRTLStyles() {
+  const styleElement = document.createElement('style');
+  styleElement.textContent = rtlStyles;
+  document.head.appendChild(styleElement);
+}
+
+// Initialize the language switcher when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Inject RTL styles
+  injectRTLStyles();
+  
+  // Initialize language switcher
+  const languageSwitcher = new LanguageSwitcher();
+  
+  // Make it globally available if needed
+  window.languageSwitcher = languageSwitcher;
+});
+
+// Export for module systems if needed
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = LanguageSwitcher;
+}</script>
 
 </body>
 
